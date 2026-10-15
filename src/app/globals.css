@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 21% 7%;
+    --foreground: 0 0% 96%;
+    --card: 222 19% 11%;
+    --card-foreground: 33 36% 95%;
+    --primary: 37 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 225 19% 13%;
+    --muted-foreground: 37 8% 60%;
+    --border: 227 14% 19%;
+
+    /* --font-inter and --font-lora are injected by next/font in app/layout.tsx */
+    --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: var(--font-lora), Georgia, serif;
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-base: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-xxl: 4rem;
+    --space-xxxl: 6rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
